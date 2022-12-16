@@ -1,8 +1,7 @@
 # mecho
 
-mecho is _marked up_ echo. It's a shell function that allows you to
-easily print colored and formatted text to the terminal. It's just 
-a simple search and replace.
+mecho is _marked up_ echo. It's a shell function for printing colored and 
+formatted text to the terminal using a simple markup.
 
 ## Installation
 
@@ -33,7 +32,7 @@ markup tags. The tags are in the form `[tag]` and `[/]` to reset.
 ```bash
 mecho "A [red]rose[/] is a [bg_red]rose[/] is a [red][bold][bg_yellow]rose[/]"
 ```
-![screenshot](/rose.png)
+![screenshot](https://raw.githubusercontent.com/SinaKhalili/mecho/main/screenshot.png)
 
 ## Tags
 
@@ -42,3 +41,6 @@ Effects: `reset`, `bold`, `dim`, `italic`, `underline`, `blink`, `rblink`, `reve
 To make a background color, prefix the color with `bg_`.
 
 To stack tags, just put them in order, like [color][effect][bg_color]
+
+Markup inspired by [rich](https://github.com/willmcgugan/rich), in turn inspired by
+BBCode.
