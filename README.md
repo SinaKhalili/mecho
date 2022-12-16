@@ -6,7 +6,7 @@ formatted text to the terminal using a simple markup.
 ## Installation
 
 Just copy the `mecho` function into your shell's rc file.
-Here it is, in full:
+Here it is, in full, for `bash`:
 
 ```bash
 mecho() {
@@ -14,15 +14,15 @@ mecho() {
   effects=(reset bold dim italic underline blink rblink reverse)
   M=$1; M=${M//\[\/\]/\[reset\]}
   for i in "${!colors[@]}"; do
-    M=${M//\[${colors[$i]}\]/\\\033[0;3${i}m}
-    M=${M//\[bg_${colors[$i]}\]/\\\033[4${i}m}
-    M=${M//\[${effects[$i]}\]/\\\033[${i}m}
+    M=${M//\[${colors[$i]}\]/\\033[0;3${i}m}
+    M=${M//\[bg_${colors[$i]}\]/\\033[4${i}m}
+    M=${M//\[${effects[$i]}\]/\\033[${i}m}
   done
-  printf '%s\n' "$M"
+  printf "$M\n"
 }
 ```
 
-Also in this repo is `mecho` as a script, if you prefer that.
+Also in this repo is the `zsh` version.
 
 ## Usage
 
@@ -37,7 +37,9 @@ mecho "A [red]rose[/] is a [bg_red]rose[/] is a [red][bold][bg_yellow]rose[/]"
 ## Tags
 
 Colors: `black`, `red`, `green`, `yellow`, `blue`, `purple`, `cyan`, `white`
+
 Effects: `reset`, `bold`, `dim`, `italic`, `underline`, `blink`, `rblink`, `reverse`
+
 To make a background color, prefix the color with `bg_`.
 
 To stack tags, just put them in order, like [color][effect][bg_color]

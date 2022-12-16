@@ -5,6 +5,7 @@ mecho() {
   effects=(reset bold dim italic underline blink rblink reverse)
   M=$1
   M=${M//\[\/\]/\[reset\]}
+  i=0
   for color in $colors; do
     M=${M//\[$color\]/\\033[0;3$((i))m}
     M=${M//\[bg_$color\]/\\033[4$((i))m}
