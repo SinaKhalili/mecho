@@ -3,6 +3,11 @@
 mecho is _marked up_ echo. It's a shell function for printing colored and 
 formatted text to the terminal using a simple markup.
 
+```bash
+mecho "A [red]rose[/] is a [bg_red]rose[/] is a [red][bold][bg_yellow]rose[/]"
+```
+![screenshot](https://raw.githubusercontent.com/SinaKhalili/mecho/main/screenshot.png)
+
 ## Installation
 
 Just copy the `mecho` function into your shell's rc file.
@@ -24,17 +29,10 @@ mecho() {
 
 Also in this repo is the `zsh` version.
 
-## Usage
+## Tags
 
 `mecho` takes a single argument, which is the string to print, with
 markup tags. The tags are in the form `[tag]` and `[/]` to reset.
-
-```bash
-mecho "A [red]rose[/] is a [bg_red]rose[/] is a [red][bold][bg_yellow]rose[/]"
-```
-![screenshot](https://raw.githubusercontent.com/SinaKhalili/mecho/main/screenshot.png)
-
-## Tags
 
 Colors: `black`, `red`, `green`, `yellow`, `blue`, `purple`, `cyan`, `white`
 
