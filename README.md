@@ -8,11 +8,11 @@ mecho "A [red]rose[/] is a [bg_red]rose[/] is a [red][bold][bg_yellow]rose[/]"
 ```
 ![screenshot](https://raw.githubusercontent.com/SinaKhalili/mecho/main/screenshot.png)
 
-You can also use it like so:
+Or alternatively
 ```bash
-# or like 'echo' style with no quotes
+# use it like 'echo' with no quotes
 mecho boredom [bg_green]unto[/] freedom
-# or with no new line at the end with the -n flag
+# suppress newline at the end with the -n flag
 mecho -n "[yellow][bold](User: zer0Cool)[/]"
 ```
 
@@ -50,6 +50,8 @@ Colors: `black`, `red`, `green`, `yellow`, `blue`, `purple`, `cyan`, `white`
 Effects: `reset`, `bold`, `dim`, `italic`, `underline`, `blink`, `rblink`, `reverse`
 
 To make a background color, prefix the color with `bg_`.
+
+To suppress the newline at the end, use the `-n` flag.
 
 To stack tags, just put them in order, like [color][effect][bg_color]
 
